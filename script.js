@@ -66,6 +66,11 @@ resetBtn.addEventListener("click", ()=>{
 
 custSz.addEventListener("click", ()=>{
     customeSize = Number(prompt("Enter Grid Size (Less than 100 units)"));
+    console.log(customeSize);
+    if(customeSize===0){
+        customeSize = defaultSize;
+    }
+
     if(customeSize > 100){
         customeSize = 100;
     }
