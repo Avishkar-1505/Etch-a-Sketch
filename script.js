@@ -22,4 +22,17 @@ function drawGrid(size) {
 
 drawGrid(defaultSize);
 
+const colors = ["#DAF7A6", "#FFC300", "#FF5733", "#C70039", "#900C3F", "#581845"]
+
+
+const squares = document.querySelectorAll(".square");
+
+squares.forEach((square) => {
+    square.addEventListener("mouseover", ()=>{
+        const color = colors[(Math.floor(Math.random()*10))%6];
+        square.style.background = `${color}`;
+    })
+})
+
+
 
